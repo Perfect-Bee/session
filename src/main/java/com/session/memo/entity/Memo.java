@@ -21,8 +21,10 @@ public class Memo {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    public Memo(String text) {
+    public Memo(String text, User user) {
+
         this.text = text;
+        this.user = user;
     }
 
 }
