@@ -22,7 +22,7 @@ public class MemoController {
     @PostMapping("/memos")
     public ResponseEntity<CreateMemoResponse> create(
             // 2. 로그인 한 사람만 메모 입력할 수 있도록
-            @SessionAttribute(name = "loginUser", required = false) SessionUser sessionUser, HttpSession session,
+            @SessionAttribute(name = "loginUser", required = false) SessionUser sessionUser,
             @RequestBody CreateMemoRequest request
     ) {
         //                                                  3-1. request -> sessionUser, request
